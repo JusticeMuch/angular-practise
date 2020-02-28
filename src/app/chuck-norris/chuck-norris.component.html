@@ -1,0 +1,25 @@
+<h1>Chuck Norris Joke Generator</h1>
+
+<div class="container main" >
+    <div>
+       <form #f="ngForm" (ngSubmit)="getJoke(f)">
+           <div class="form-control">
+                <label for="Category"></label>
+                <select name="category" ngModel>
+                    <option *ngFor="let category of categories" [value]=category >{{category}}</option>
+                </select>
+           </div>
+           <div class="form-control">
+               <button type="submit">Get Joke</button>
+           </div>
+            
+        </form> 
+    </div>
+    
+    <div>
+        <h2>Jokes Below</h2>
+        <div>
+            <p *ngFor="let joke of jokes" color="black">{{joke}}</p> 
+        </div>
+    </div>  
+</div>
