@@ -12,7 +12,7 @@ export class AnimeMangaSearchComponent implements OnInit {
   constructor(private searchApi : AnimeMangaSearchApiService) { }
 
   ngOnInit(): void {
-    
+    this.searchApi.getAnimeResults("neon").subscribe(val => console.log(val));
   }
 
 }
